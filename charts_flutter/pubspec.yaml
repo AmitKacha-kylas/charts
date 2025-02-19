@@ -1,35 +1,28 @@
 name: charts_flutter
 version: 0.12.0
-description: Material Design charting library for flutter.
+description: Material Design charting library for Flutter.
 homepage: https://github.com/google/charts
 
 environment:
-  sdk: '>=2.12.0 <3.0.0'
+  sdk: '>=2.12.0 <3.0.0'  # Compatible with Dart 2.18.6
 
 dependencies:
-  # Pointing this to a local path allows for pointing to the latest code
-  # in Github for open source development.
-  #
-  # The pub version of charts_flutter will point to the pub version of charts_common.
-  # The latest pub version is commented out and shown below as an example.
   charts_common: ^0.12.0
-  # charts_common:
-  #   path: ../charts_common/
-  collection: ^1.14.5
+  collection: ^1.16.0  # Compatible with Dart 2.18
   flutter:
     sdk: flutter
-  intl: ">=0.15.2 <= 0.18.1"
+  intl: ^0.17.0        # Last version compatible with Dart 2
   logging: ^1.0.2
-  meta: ^1.1.1
+  meta: ^1.7.0         # Last version compatible with Dart 2
 
 dependency_overrides:
-  test_api: 0.4.12
-  matcher : 0.12.16
-  async : 2.11.0
+  test_api: 0.4.12  # Matches flutter_test dependency
+  matcher: 0.12.16
+  async: 2.11.0
 
 dev_dependencies:
   mockito: ^5.0.0
   build_runner: ^2.3.3
   flutter_test:
     sdk: flutter
-  test: 1.24.3
+  test: 1.24.2  # Use this version to avoid conflicts with flutter_test
